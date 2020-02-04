@@ -1,0 +1,152 @@
+.jvid {
+	background: #000;
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	padding-top: 10px;
+	position: relative;
+}
+
+.jvid iframe,
+.jvid__poster,
+.jvid__background,
+.jvid__fade {
+	border: 0;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+.jvid__poster {
+	cursor: pointer;
+	opacity: 1;
+	transition: all .4s ease;
+	z-index: 10;
+}
+
+.jvid__poster--fade {
+	opacity: 0;
+}
+
+.jvid__background {
+	background-size: cover;
+	background-position: center center;
+	transition: transform .3s ease;
+}
+
+.jvid__fade {
+	background: black;
+	opacity: 0;
+	transition: opacity .3s ease;
+}
+
+.jvid__play {
+	background: black;
+	border: 2px solid white;
+	cursor: pointer;
+	height: 64px;
+	left: 50%;
+	margin: -33px 0 0 -33px;
+	position: absolute;
+	top: 50%;
+	width: 64px;
+	z-index: 15;
+	transition: transform .3s ease;
+}
+
+.jvid__play:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 18px;
+	left: 21px;
+	margin: 0 auto;
+	border-style: solid;
+	border-width: 12px 0 12px 19px;
+	border-color: transparent transparent transparent rgba(255, 255, 255, 1);
+	transition: transform .3s ease;
+}
+
+.jvid__play--circle:after {
+	top: 20px;
+	left: 23px;
+}
+
+.jvid__play--dark:after {
+ 	border-color: transparent transparent transparent rgba(0, 0, 0, 1);
+}
+
+.jvid__play--rounded-square {
+ 	border-radius: 10px;
+}
+
+.jvid__play--circle {
+ 	border-radius: 80px;
+}
+
+/* Animations */
+.jvid--fade:hover .jvid__fade {
+ 	opacity: .6;
+}
+
+.jvid--background-scale:hover .jvid__background {
+	transform: scale(1.1);
+}
+
+.jvid--arrow-scale .jvid__play:hover {
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.jvid__title {
+	background: rgba(0,0,0,.6);
+	position: absolute;
+	bottom: 0;
+	color: white;
+	font-size: 24px;
+	left: 0;
+	right: 0;
+	padding: 20px;
+	z-index: 15;
+}
+
+.jvid--mini .jvid__title {
+	font-size: 14px;
+	padding: 10px;
+}
+.jvid--mini .jvid__play {
+	height: 44px;
+	margin: -22px 0 0 -22px;
+	width: 44px;
+}
+.jvid--mini .jvid__play:after {
+	border-width: 8px 0 8px 14px;
+	top: 13px;
+	left: 14px;
+}
+
+@media (max-width: 540px) {
+	.jvid__title {
+		font-size: 14px;
+		padding: 10px;
+	}
+	.jvid__play {
+		height: 44px;
+		margin: -22px 0 0 -22px;
+		width: 44px;
+	}
+	.jvid__play:after {
+		border-width: 8px 0 8px 14px;
+		top: 12px;
+		left: 13px;
+	}
+	.jvid__play--circle:after {
+		top: 13px;
+		left: 15px;
+	}
+}
