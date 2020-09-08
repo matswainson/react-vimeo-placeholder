@@ -1,10 +1,12 @@
+![react-vimeo-placeholder](https://matswainson.com/images/github/vimeo.png)
+
 # React custom vimeo player placeholder
 
 Embed Vimeo player with a custom placeholder image and play button
 
 ### Example
 
-![react-vimeo-placeholder-2](http://matswainson.com/wp-content/uploads/2020/02/react-vimeo-placeholder-2.png)
+![react-vimeo-placeholder-2](https://matswainson.com/images/github/vimeo-player.png)
 
 ```js
 import Vimeo from 'react-vimeo-placeholder';

@@ -1,6 +1,6 @@
 {
   "name": "react-vimeo-placeholder",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Embed Vimeo player with a custom placeholder image and play button",
   "main": "dist/index.js",
   "scripts": {
